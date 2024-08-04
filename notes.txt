@@ -1,3 +1,10 @@
+for RideBooking
+username - abdulazeem3802
+pass - Abdul12
+
+mongodb+srv://abdulazeem3802:Abdul12@cluster0.cmghiko.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
 
 
 * data-scroll data-scroll-speed="3"
