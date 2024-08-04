@@ -6,6 +6,7 @@ const connectDB = async (DATABASE_URL) =>{
             dbName:process.env.DB_NAME,
             // useNewUrlParser: true,
             // useUnifiedTopology: true,
+            connectTimeoutMS: 30000,
             serverSelectionTimeoutMS: 30000, // 30 seconds
             socketTimeoutMS: 45000, // 45 seconds
         }
