@@ -6,7 +6,6 @@ import session from 'express-session';
 import cors from 'cors'
 import connectDB from './db/connectdb.js';
 import web from './routes/web.js'
-// import io from 'socket.io';
 import http from 'http'; // Import http
 import { Server } from 'socket.io';
 
