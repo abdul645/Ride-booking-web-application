@@ -1,0 +1,69 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mandali&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
+
+    <!-- for smmoth scrollling  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/DriveHome.css">
+
+    <!-- //for leaflet library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.81.1/dist/L.Control.Locate.min.css" />
+
+    <!-- leaflet routing machine  css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+
+    <!-- animation when scrolling  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+    <title><%- title %></title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-left">
+            <li>
+                <a href="/HomeDriver"><button id="HeaderLogo">RideEase</button></a>
+            </li>
+            <!-- <a href="/Ride"><button class="common-class Ride">Ride</button></a> -->
+            <a href="#"><button class="common-class">About</button></a>
+            <a href="#"><button class="common-class">Help</button></a>
+        </div>
+        <div class="nav-right">
+                <div id="User-info">
+                    <button class="common-class">
+                         <span id="user-name"><%= username %></span>
+                    </button>
+                </div>
+        </div>
+    </div>
+                        
+
+    
+
+

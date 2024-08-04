@@ -1,0 +1,67 @@
+<%- include('./partials/Ride-header.ejs')%>
+    <link rel="stylesheet" href="/css/Ride.css">
+    <div class="Ride-Container">
+        <div class="search-area">
+            <form action="/Ride" method="POST" id="rideForm">
+                <div class="borderdiv">
+                    <h2>Get a Ride</h2>
+                    <div class="input-container">
+                        <span class="icon-circle">
+                            <i class="fa-solid fa-circle-dot fa-2xs" style="color: #080808;"></i>
+                        </span>
+                        <input type="text" class="pickup-input" name="pickup" id="text-pickup"
+                            placeholder="Pickup location">
+                        <span class="getlocation"><i class="fa-solid fa-location-arrow"></i></span>
+                        <span class="cross-icon-pickup" id="pickup-icon"><i class="fa-solid fa-square-xmark"
+                                style="color: #000000;"></i></span>
+
+                    </div>
+                    <div class="input-container">
+                        <span class="icon-circle">
+                            <i class="fa-solid fa-circle-stop fa-2xs" style="color: #000000;"></i>
+                        </span>
+                        <input type="text" class="dest-input" name="dropoff" id="text-dropoff"
+                            placeholder="Dropoff location">
+                        <span class="cross-icon-drop" id="dropoff-icon"><i class="fa-solid fa-square-xmark"
+                                style="color: #000000;"></i></span>
+                    </div>
+                    <button type="submit" class="btn-search">Search</button> 
+                     
+                    <div class="loader-container">
+                        <div class="loader"></div>
+                    </div>
+                    
+                </div>
+                <!-- <a href="/go"> -->
+                        <!-- <button type="submit" class="confirm-btn">confirm</button> -->
+                    <!-- </a> -->
+                    <div class="details">
+                        <div id="output">
+        
+                        </div>
+                    </div>
+            </form>
+            
+        </div>
+
+        <%- include('./partials/sideBarMap.ejs')%>
+
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMYxNb-KY9qw7SP5QyuOjsy_W49eqOrM8&libraries=places"
+        async defer></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+
+
+    <script src="/js/Ride.js"></script>
+
+    <!-- it should come after leaflet library  -->
+    <!-- Your custom script -->
+    <script src="/js/Ride2.js"></script>
+
+
+    <!-- api key  -->
+    <!-- AIzaSyCMYxNb-KY9qw7SP5QyuOjsy_W49eqOrM8 -->
+    <!-- AIzaSyC1axf4zYIq2U4sEpylcHeztnQDLGQ0xH0 -->
+    <!-- AIzaSyCkuno4PSFWqURj7f7AXoOoIQvLiey7xn4 -->
+    <!-- AIzaSyDc3bkeZE2zHYfsjX-A0NoTX3evZfkPsaI&libraries=geometry,places,drawing -->

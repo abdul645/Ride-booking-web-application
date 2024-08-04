@@ -1,0 +1,479 @@
+/* signup for ride code start  */
+
+.close-btn {
+    width: 4.9vw;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 3.8vw;
+    right: 100px;
+    top: 140px;
+    position: absolute;
+    transition: all 0.2s ease-in;
+}
+
+.close-btn:hover {
+    opacity: 0.9;
+    background-color: #d4c7c7;
+    cursor: pointer;
+}
+
+.mainnn {
+    display: flex;
+    padding-right: 100px;
+    /* height: 100vh; */
+    text-decoration: none;
+}
+
+.driverSignup {
+    height: 0vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.mainLeft {
+    width: 40vw;
+    /* height: 43vh; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 300px;
+    margin-left: 100px;
+    border-bottom: 2px solid;
+    text-decoration: none;
+    color: black;
+    /* background-color: lawngreen; */
+
+}
+
+.mainLeft:hover {
+    cursor: pointer;
+}
+
+
+.mr1 {
+    width: 6vw;
+    padding-top: 15px;
+    text-align: left;
+    transition: 1.5s;
+    /* background-color: blue; */
+}
+
+.mainLeft:hover .mr1,
+.mainRight:hover .mr1 {
+    padding-left: 40px;
+}
+
+.mainLeft h1 {
+    font-size: 2.8vw;
+    height: 18vh;
+    /* background-color: magenta; */
+}
+
+.mainRight {
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 300px;
+    margin-left: 100px;
+    border-bottom: 2px solid;
+    color: #000;
+    /* background-color: khaki; */
+}
+
+.mainRight:hover {
+    cursor: pointer;
+}
+
+.mainRight h1 {
+    font-size: 2.8vw;
+    height: 18vh;
+    /* background-color: navajowhite; */
+}
+
+/* .driver-sgnup-for-popup{
+    text-decoration: none;
+} */
+
+/* signup for ride code end  */
+
+
+
+
+
+
+
+/* ********************************************************************************************* */
+
+
+
+
+/* signup popup for ride code start */
+
+.overlay-ride {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    /* top: 0%; */
+    /* position: absolute; */
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+}
+
+.active-overlay-ride {
+    z-index: 1;
+    opacity: 1;
+}
+
+.wrapper-ride {
+    width: 30vw;
+    height: 86vh;
+    background-color: white;
+    margin: -3% 0 0 35%;
+    padding-top: 20px;
+    z-index: 99;
+    position: relative;
+    /* background: transparent; */
+    /* backdrop-filter: blur(20px); */
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    /* overflow: hidden; */
+    /* z-index: -1; */
+    transition: transform .7s, height .2s;
+}
+
+.active-popup-ride {
+    transform: scale(1);
+}
+
+.wrapper-ride .form-box-ride {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper-ride .icon-close-ride {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.form-box-ride h2 {
+    font-size: 2rem;
+    color: #162938;
+    text-align: center;
+}
+
+.input-box-ride {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 20px 0;
+    /* background-color: rosybrown; */
+}
+
+.input-box-ride label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box-ride input:focus~label,
+.input-box-ride input:valid~label {
+    top: -5px;
+}
+
+
+.input-box-ride input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.input-box-ride .icon-ride {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+    /* background-color: rebeccapurple; */
+}
+
+.remember-forgot-ride {
+    font-size: .9rem;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot-ride label input {
+    accent-color: #162938;
+    margin-right: 4px;
+}
+
+.btn-ride {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.login-register-ride {
+    font-size: .9rem;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 5px 0 10px;
+}
+
+.login-register-ride p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register-ride p a:hover {
+    text-decoration: underline;
+}
+
+/* signup popup for ride code end  */
+
+
+
+
+/* ********************************************************************************************* */
+
+
+/* signup popup for driver code start */
+
+.overlay-driver {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    top: 0%;
+    /* position: absolute; */
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+}
+
+.active-overlay-driver {
+    z-index: 1;
+    opacity: 1;
+}
+
+.wrapper-driver {
+    width: 50vw;
+    height: 88vh;
+    background-color: white;
+    margin: -3% 0 0 25%;
+    padding-top: 1px;
+    z-index: 99;
+    position: relative;
+    /* background: transparent; */
+    /* backdrop-filter: blur(20px); */
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: scale(0); */
+    /* overflow: hidden; */
+    /* z-index: -1; */
+    position: absolute;
+    transition: transform .7s, height .2s;
+}
+
+.active-popup-driver {
+    transform: scale(1);
+}
+
+.wrapper-driver .form-box-driver {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper-driver .icon-close-driver {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.form-box-driver h2 {
+    font-size: 2rem;
+    color: #162938;
+    text-align: center;
+
+}
+
+.first-last-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.username-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-confirmpass {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.phone-license {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.input-box-driver {
+    position: relative;
+    width: 45%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 20px 0;
+    /* background-color: rosybrown; */
+}
+
+.input-box-driver label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box-driver input:focus~label,
+.input-box-driver input:valid~label {
+    top: -5px;
+}
+
+
+.input-box-driver input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.input-box-driver .icon-driver {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+    /* background-color: rebeccapurple; */
+}
+
+.remember-forgot-driver {
+    font-size: .9rem;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot-driver label input {
+    accent-color: #162938;
+    margin-right: 4px;
+}
+
+.btn-driver {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.login-register-driver {
+    font-size: .9rem;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 20px 0 0px;
+}
+
+.login-register-driver p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register-driver p a:hover {
+    text-decoration: underline;
+}
+
+/* signup popup for driver code end  */

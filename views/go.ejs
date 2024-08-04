@@ -1,0 +1,123 @@
+
+<%- include('./partials/Ride-header.ejs')%>
+    <!-- <link rel="stylesheet" href="/css/go.css"> -->
+
+    <div class="complete-main-div">
+        <div class="left-scroll-div">
+            <h1>Choose a ride</h1>
+            <div class="sourse-plus-dest">
+                <span id="source"><%= pickup %></span>
+                <i class='fas fa-arrow-right' style='font-size:15px'></i>
+                <span id="destination"><%= dropoff %></span>
+                <p>Leave Now</p>
+            </div>
+            <h2>Recommended</h2>
+            <div class="Recommended-share" id="Bike">
+                <div class="bk">
+                    <img src="/images/Uber_Moto_India1.png" alt="">
+                </div>
+                <div class="bk-content">
+                    <span>
+                        <p>BikeShare</p>
+                    </span>
+                    <p>4 mins away</p>
+                    <p>Affordable, motorcycle rides</p>
+                </div>
+                <div class="bk-price">₹ <%= bikePrice %></div>
+            </div>
+
+
+            <div class="Recommended-share" id="minicar">
+                <div class="bk">
+                    <img src="/images/UberGo_v1.png" alt="">
+                </div>
+                <div class="bk-content">
+                    <span>
+                        <p>RideEaseGo</p>
+                    </span>
+                    <p>6 mins away</p>
+                    <p>Affordable, compact rides</p>
+                </div>
+                <div class="bk-price">₹<%= miniPrice %></div>
+            </div>
+            
+            <div class="Recommended-share" id="sedanCar">
+                <div class="bk">
+                    <img src="/images/Select_v1.png" alt="">
+                </div>
+                <div class="bk-content">
+                    <span>
+                        <p>GoSedan</p>
+                    </span>
+                    <p>5 mins away</p>
+                    <p>Affordable, sedan rides</p>
+                </div>
+                <div class="bk-price">₹<%= sedanPrice %></div>
+            </div>
+            <h2>Economy</h2>
+            <div class="Recommended-share" id="topSedan">
+                <div class="bk">
+                    <img src="/images/package_UberComfort_new_2022.png" alt="">
+                </div>
+                <div class="bk-content">
+                    <span>
+                        <p>Premier</p>
+                    </span>
+                    <p>5 mins away</p>
+                    <p>Comfortable sedans, top-quality drivers</p>
+                </div>
+                <div class="bk-price">₹<%= topSedanPrice %></div>
+            </div>
+
+
+            <div class="Recommended-share" id="XLCar">
+                <div class="bk">
+                    <img src="/images/package_UberXL_new_2022.png" alt="">
+                </div>
+                <div class="bk-content">
+                    <span>
+                        <p>RideEaseXL</p>
+                    </span>
+                    <p>7 mins away</p>
+                    <p>Affordable, SUV rides</p>
+                </div>
+                <div class="bk-price">₹<%= xlPrice %></div>
+            </div>
+        </div>
+
+        <!-- <div class="req-ride">
+            <div class="pay-method">
+                <img src="/images/cash_3x.png" alt="">
+                <span>cash 
+                    <i class="fa-solid fa-angle-down fa-2xs" style="color: #000000;"></i>
+                </span>
+
+            </div>
+            <a href="#">
+                <div class="req-btn">
+                    <button>Request RideEase</button>
+                </div>
+            </a>
+        </div> -->
+
+        <div class="right-div-map">
+            <!-- <div class="map-area">
+                <div class="mapp" id="mapppp">
+                 
+                </div>
+            
+            </div> -->
+            <%- include('./partials/sideBarMap.ejs')%>
+        </div>
+
+    </div>
+<!-- <script id="route-data" type="application/json">
+    <%- JSON.stringify(routeData) %>
+</script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMYxNb-KY9qw7SP5QyuOjsy_W49eqOrM8&libraries=places" async defer></script>
+
+
+
+
+    <script src="/js/Ride2.js"></script>
+    <script src="/js/go.js"></script>

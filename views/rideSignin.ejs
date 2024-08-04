@@ -1,0 +1,42 @@
+
+<%- include('./partials/signin-signup-ride-Header.ejs')%>
+<link rel="stylesheet" href="/css/rideSignin.css">
+<div class="overlay">
+    <!-- <img src="/images/Nature-wallpapers-Full-HD-backgroud.jpg" alt=""> -->
+</div>
+<div class="wrapper">
+    <span class="icon-close" id="icon-close">&times;</span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="/rideSignin" method="post" >
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="UserName" id="UserName" required>
+                <label id="UserName">Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-eye-slash" id="eyeicon"></i></i>
+                    <!-- <i class="fa-solid fa-eye"></i> -->
+                </span>
+                <input type="password" id="password" name="password" required>
+                <label for="">password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button class="btn">Login</button>
+            <div class="login-register">
+                <p>Don't have an account ?
+                    <a href="/rideSignup" class="login-link" >Signup</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/js/rideSignin.js"></script>
+<script src="/js/rideSignin2.js"></script>
+
+
+
+

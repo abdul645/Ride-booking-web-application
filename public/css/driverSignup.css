@@ -1,0 +1,207 @@
+
+/* signup popup for driver code start */
+
+.overlay-driver{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0,0.5);
+    top: 0%;
+    /* position: absolute; */
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+}
+/* .active-overlay-driver{
+    z-index: 1;
+    opacity: 1;
+} */
+.wrapper-driver{
+    width: 50vw;
+    height: 80vh;
+    background-color: white;
+    margin: -1% 0 0 25%;
+    padding-top: 1px ;
+    z-index: 99;
+    position: relative;
+    /* background: transparent; */
+    /* backdrop-filter: blur(20px); */
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    /* overflow: hidden; */
+    /* z-index: -1; */
+    position: absolute;
+    transition: transform .7s ,height .2s;
+} 
+/* .active-popup-driver{
+   transform: scale(1);
+} */
+.wrapper-driver .form-box-driver{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper-driver .icon-close-driver{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+.form-box-driver h2{
+    font-size: 2rem;
+    color: #162938;
+    text-align: center;
+    /* background-color: #c10d0d; */
+    
+}
+.first-last-name{
+    display: flex;
+    justify-content: space-between;
+}
+.username-phone{
+    display: flex;
+    justify-content: space-between;
+}
+.password-confirmpass{
+    display: flex;
+    justify-content: space-between;
+
+}
+/* .license-image{
+    display: flex;
+    justify-content: space-between;
+
+} */
+
+
+.input-box-driver{
+    position: relative;
+    width: 45%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 25px 0;
+    /* background-color: rosybrown; */
+}
+#ProfileImage{
+    margin-top: 10px;
+}
+.input-box-driver label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box-driver input:focus~label,
+.input-box-driver input:valid~label{
+    top: -5px;
+}
+
+
+.input-box-driver input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    font-family:  system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* resize: none; */
+}
+
+/* disable arrows from Number input  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+.input-box-driver .icon-driver{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+    /* background-color: rebeccapurple; */
+}
+.input-box-driver small{
+    visibility: hidden;
+    color: #c10d0d;
+    font-size: 1vw;
+}
+.input-box-driver.error .icon-driver{
+    color: #c10d0d;
+}
+.input-box-driver.error{
+    border-bottom: 2px solid #c10d0d;
+}
+.input-box-driver.error small{
+    visibility: visible;
+}
+.input-box-driver small .success{
+    visibility: hidden;
+}
+
+.remember-forgot-driver{
+    font-size: .9rem;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot-driver label input{
+    accent-color: #162938;
+    margin-right: 4px;
+}
+
+.btn-driver{
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.login-register-driver{
+    font-size: .9rem;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 20px 0 0px;
+}
+.login-register-driver p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register-driver p a:hover{
+    text-decoration: underline;
+}
+/* signup popup for driver code end  */

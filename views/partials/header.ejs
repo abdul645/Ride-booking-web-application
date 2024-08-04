@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mandali&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
+
+    <!-- for smmoth scrollling  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/DriveHome.css">
+
+    <!-- animation when scrolling  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    
+
+
+
+
+    <title><%- title %></title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-left">
+            <li>
+                <a href="/"><button id="HeaderLogo">RideEase</button></a>
+            </li>
+            <!-- <a href="/Ride"><button class="common-class Ride">Ride</button></a> -->
+            <a href="#"><button id="leftBtn" class="common-class">About</button></a>
+            <a href="#"><button id="leftBtn" class="common-class">Help</button></a>
+        </div>
+        <div class="nav-right">
+            <a href="/signin-signup-ride"><button id="login" class=" signin common-class">Rider</button></a>
+            <a href="/signin-signup-Drive"><button class="signin common-class" id="signup-btn">Driver</button></a>
+           
+            <div id="User-info" style="display: none;">
+                <button class="common-class">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    

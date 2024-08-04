@@ -1,0 +1,57 @@
+
+<%- include('./partials/signin-signup-ride-Header.ejs')%>
+
+    <link rel="stylesheet" href="/css/rideSignup.css">
+
+
+    <!-- signup code for ride  -->
+<div class="overlay-ride"></div>
+<div class="wrapper-ride">
+    <span class="icon-close-ride" id="icon-close-ride">&times;</span>
+    <div class="form-box-ride register-ride">
+        <h2>Signup</h2>
+        <form method="post" action="/rideSignup" id="form">
+            <div class="input-box-ride">
+                <span class="icon-ride"><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="username" id="username" autocomplete="off" required>
+                <label for="">Username</label>
+                <small>Error msg</small>
+            </div>
+            <div class="input-box-ride">
+                <span class="icon-ride"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" id="email" required>
+                <label id="email">Email</label>
+                <small>Error msg</small>
+            </div>
+            <div class="input-box-ride">
+                <span class="icon-ride"><i class="fa-solid fa-phone"></i></span>
+                <input type="number" name="contactNumber" id="cnumber" required>
+                <label for="">Contact Number</label>
+                <small>Error msg</small>
+            </div>
+            <div class="input-box-ride">
+                <span class="icon-ride"><i class="fa-solid fa-eye-slash" id="eyeicon"></i></span>
+                <input type="password" name="password" id="password" required>
+                <label for="">Password</label>
+                <small>Error msg</small>
+            </div>
+            <div class="input-box-ride">
+                <span class="icon-ride"><i class="fa-solid fa-eye-slash" id="eyeicon1"></i></span>
+                <input type="password" name="cpassword" id="password1" required>
+                <label for="">Confirm password</label>
+                <small>Error msg</small>
+            </div>
+           
+            <button type="submit" class="btn-ride">Sign up</button>
+            <div class="login-register-ride">
+                <p>Already have an account ?
+                    <a href="/rideSignin" class="login-link-ride">Login</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/js/rideSignup.js"></script>
+
+<!-- for sweetalert -->
+<script src="/js/sweetalert.min.js"></script>

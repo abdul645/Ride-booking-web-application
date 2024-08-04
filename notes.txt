@@ -1,0 +1,204 @@
+
+
+* data-scroll data-scroll-speed="3"
+
+//css
+pointer-events=none;
+transition: 200ms ease-in-out;
+
+transform-origin: right
+backdrop-filter: blur(20px);
+
+
+
+* remix icon
+
+* //to use symbol
+search in laptop - character map
+
+
+
+* Multer - Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. 
+It is written on top of busboy for maximum efficiency.
+NOTE: Multer will not process any form which is not multipart (multipart/form-data).
+
+* npm i multer
+
+
+
+* express: Web application framework for Node.js.
+* mongoose: MongoDB object modeling tool.
+* multer: Middleware for handling multipart/form-data, used for handling file uploads.
+
+
+
+
+************
+MulterError: Unexpected field
+    at wrappedFileFilter (D:\Abdul\Ride Sharing Project\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\Abdul\Ride Sharing Project\node_modules\multer\lib\make-middleware.js:107:7)      
+    at Multipart.emit (node:events:514:28)
+    at HeaderParser.cb (D:\Abdul\Ride Sharing Project\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Abdul\Ride Sharing Project\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Abdul\Ride Sharing Project\node_modules\busboy\lib\types\multipart.js:394:37)        
+    at feed (D:\Abdul\Ride Sharing Project\node_modules\streamsearch\lib\sbmh.js:248:10)
+    at SBMH.push (D:\Abdul\Ride Sharing Project\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\Abdul\Ride Sharing Project\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:556:12)
+
+solution ->  
+
+  The "Unexpected field" error in Multer occurs when the uploaded field names in the
+  form do not match the expected field names specified in the Multer configuration.
+  Ensure that the field names used in your HTML form match exactly with those specified 
+  in the fields array of your Multer configuration.
+
+  **************************
+
+
+  ****************************
+
+  Error creating user: MongoServerError: E11000 duplicate key error collection: Driver-Rides-Details-Database.driverusers index: email_1 dup key: { email: null }
+    at InsertOneOperation.execute (D:\Abdul\Ride Sharing Project\node_modules\mongodb\lib\operations\insert.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async executeOperationAsync (D:\Abdul\Ride Sharing Project\node_modules\mongodb\lib\operations\execute_operation.js:106:16) {
+  index: 0,
+  code: 11000,
+  keyPattern: { email: 1 },
+  keyValue: { email: null },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+
+                              or 
+
+
+getting this error Error creating user: TypeError: Cannot read properties of undefined (reading 'FName')
+    at driverSignupController (file:///D:/Abdul/Ride%20Sharing%20Project/controllers/driverSignupController.js:6:48)
+    at Layer.handleRequest (D:\Abdul\Ride Sharing Project\node_modules\router\lib\layer.js:101:15)
+    at next (D:\Abdul\Ride Sharing Project\node_modules\router\lib\route.js:142:13)
+    at Route.dispatch (D:\Abdul\Ride Sharing Project\node_modules\router\lib\route.js:107:3)
+    at handle (D:\Abdul\Ride Sharing Project\node_modules\router\index.js:421:11)
+    at Layer.handleRequest (D:\Abdul\Ride Sharing Project\node_modules\router\lib\layer.js:101:15)
+    at D:\Abdul\Ride Sharing Project\node_modules\router\index.js:288:22
+    at processParams (D:\Abdul\Ride Sharing Project\node_modules\router\index.js:568:12)
+    at next (D:\Abdul\Ride Sharing Project\node_modules\router\index.js:282:5)
+    at Function.handle (D:\Abdul\Ride Sharing Project\node_modules\router\index.js:181:3)
+
+
+solution->  remove extra comment or code 
+
+***********************
+
+
+*************************
+
+for removing index from schema  via commands
+
+sol-> 
+mongo
+use YourDatabaseName 
+db.collectionName.getIndexes()
+db.collectionName.dropIndex({ email: 1 })
+db.collectionName.getIndexes()
+
+
+example
+mongo
+use Driver-Rides-Details-Database
+db.DriverUser.getIndexes()
+db.DriverUser.dropIndex({ email: 1 })
+db.DriverUser.getIndexes()
+
+*******************************************************
+
+
+
+error->
+
+ReferenceError: D:\Abdul\Ride Sharing Project\views\HomeDriver.ejs:1
+ >> 1| <%-include('./partials/driverHeader.ejs')%>
+    2|
+    3|
+    4|     <div class="div">
+
+D:\Abdul\Ride Sharing Project\views\partials\driverHeader.ejs:53
+    51|                 <div id="User-info" >
+    52|                     <button button class="common-class" >
+ >> 53|                         <span id="user-name"><%= username %></span>
+    54|                     </button>
+    55|                 </div>
+    56|             </a>
+
+username is not defined
+    at eval (eval at compile (D:\Abdul\Ride Sharing Project\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:15:26)
+    at driverHeader (D:\Abdul\Ride Sharing Project\node_modules\ejs\lib\ejs.js:703:17)
+    at include (D:\Abdul\Ride Sharing Project\node_modules\ejs\lib\ejs.js:701:39)
+    at eval (eval at compile (D:\Abdul\Ride Sharing Project\node_modules\ejs\lib\ejs.js:673:12), <anonymous>:10:16)
+    at HomeDriver (D:\Abdul\Ride Sharing Project\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (D:\Abdul\Ride Sharing Project\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (D:\Abdul\Ride Sharing Project\node_modules\ejs\lib\ejs.js:491:10)      
+    at View.render (D:\Abdul\Ride Sharing Project\node_modules\express\lib\view.js:139:8)
+    at tryRender (D:\Abdul\Ride Sharing Project\node_modules\express\lib\application.js:626:10)
+    at Function.render (D:\Abdul\Ride Sharing Project\node_modules\express\lib\application.js:578:3)
+
+
+
+
+    solution->
+
+    // importing
+    import { driverSigninController } from "../../controllers/driverSigninController.js";
+
+*********************************************************
+
+* icon image download website
+https://www.flaticon.com/
+
+***********************************************
+
+*//google map in leaflet
+
+// googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+//     maxZoom: 20,
+//     subdomains:['mt0','mt1','mt2','mt3']
+// });
+
+// googleSat.addTo(map);
+
+
+
+
+
+google map api key script 
+    <!-- <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+            key: "YOUR_API_KEY",
+            v: "weekly",
+            // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+            // Add other bootstrap parameters as needed, using camel case.
+        });
+    </script> -->
+
+
+
+**********************************************************************************
+Error creating user: MongoServerError: not authorized on Driver-Rides-Details-Database to execute command { insert: "driverusers", documents: [ { FirstName: "Abdul", LastName: "Azeem", UserName: "Abdul", ContactNumber: 1234123412, Password: "123123", ConfirmPassword: "123123", _id: ObjectId('666c521e1a1cc7efc075d1bd'), __v: 0 } ], ordered: true, lsid: { id: UUID("052f7f11-f387-4bc3-85ea-7e942330cba8") }, $db: "Driver-Rides-Details-Database" }
+    at Connection.onMessage (D:\Abdul\Ride Sharing Project\node_modules\mongodb\lib\cmap\connection.js:202:26)
+    at MessageStream.<anonymous> (D:\Abdul\Ride Sharing Project\node_modules\mongodb\lib\cmap\connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (D:\Abdul\Ride Sharing Project\node_modules\mongodb\lib\cmap\message_stream.js:124:16)
+    at MessageStream._write (D:\Abdul\Ride Sharing Project\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:556:12)
+    at _write (node:internal/streams/writable:490:10)
+    at Writable.write (node:internal/streams/writable:494:10)
+    at Socket.ondata (node:internal/streams/readable:985:22)
+    at Socket.emit (node:events:514:28) {
+  ok: 0,
+  code: 13,
+  codeName: 'Unauthorized',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+
+
+solution 1 - authorized user by using commands
+solution2 - C:\Program Files\MongoDB\Server\7.0\bin\mongod.cfg  comment authorization section 

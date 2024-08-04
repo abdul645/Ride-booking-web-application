@@ -1,0 +1,71 @@
+<%- include('./partials/signin-signup-Drive-Header.ejs')%>
+    <link rel="stylesheet" href="/css/driverSignup.css">
+
+
+    <!-- signup code for driver  -->
+    <div class="overlay-driver"></div>
+    <div class="wrapper-driver">
+        <span class="icon-close-driver" id="icon-close-driver">&times;</span>
+        <div class="form-box-driver register-driver">
+            <h2>Sign up</h2>
+            <form action="/driverSignup" method="post" id="form">
+                <div class="first-last-name">
+                    <div class="input-box-driver">
+                        <span class="icon-driver"><i class="fa-regular fa-user"></i></i></span>
+                        <input type="text" name="FName" id="fname" autocomplete="off" required>
+                        <label for="">First Name</label>
+                        <small>error msg</small>
+                    </div>
+
+                    <div class="input-box-driver">
+                        <span class="icon-driver"><i class="fa-regular fa-user"></i></i></span>
+                        <input type="text" name="LName" id="lname" autocomplete="off" required>
+                        <label for="">Last Name</label>
+                        <small>error msg</small>
+                    </div>
+                </div>
+
+                <div class="username-phone">
+                    <div class="input-box-driver">
+                        <span class="icon-driver"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" name="UserName" id="username" autocomplete="off" required>
+                        <label for="">Username</label>
+                        <small>error msg</small>
+                    </div>
+                    <div class="input-box-driver">
+                        <span class="icon-driver"><i class="fa-solid fa-phone"></i></span>
+                        <input type="number" name="CNumber" id="cnumber" required>
+                        <label for="">Contact Number</label>
+                        <small>error msg</small>
+                    </div>
+                </div>
+
+
+                <div class="password-confirmpass">
+                    <div class="input-box-driver">
+                        <span class="icon-driver"><i class="fa-solid fa-eye-slash" id="eyeicon2"></i></span>
+                        <input type="password" name="Password" id="password2" required>
+                        <label for="">password</label>
+                        <small>error msg</small>
+                    </div>
+                    <div class="input-box-driver">
+                        <span class="icon-driver"><i class="fa-solid fa-eye-slash" id="eyeicon3"></i></span>
+                        <input type="password" name="CPassword" id="password3" required>
+                        <label for="">Confirm password</label>
+                        <small>error msg</small>
+                    </div>
+                </div>
+                <button type="submit" class="btn-driver">Sign up</button>
+                <div class="login-register-driver">
+                    <p>Already have an account ?
+                        <a href="/driverSignin" class="login-link-driver">Login</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="/js/driverSignup.js"></script>
+
+<!-- for sweetalert -->
+<script src="/js/sweetalert.min.js"></script>

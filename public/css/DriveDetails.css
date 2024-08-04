@@ -1,0 +1,60 @@
+.main-div{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: rgb(54, 119, 176);s */
+}
+.inside-div{
+    width:50vw;
+    /* background-color: blueviolet; */
+}
+
+.div1{
+    margin:3vh 0 0 0vw;
+    font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.div1 p{
+    padding-top: 2vh;
+}
+.div2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5vh;
+    color: black;
+    border-bottom: 1px solid black;
+   
+}
+.div2-inside{
+    /* margin:5vh 0 0 3vw; */
+    padding: 3vh 0 3vh 0vw;
+    align-items: center;
+    /* background-color: bisque; */
+}
+.div2 .icon{
+    margin-right: 2vw;
+}
+.nextBtn{
+    margin: 1.5vw 0 0 32vw;
+    border: 0;
+    border-radius: 10px;
+    /* background-color: #ced7de; */
+    background-color: #162938;
+    color: #fff;
+    font-size: 1.5vw;
+    /* width: 10vw; */
+    padding: .8vw 6vw .8vw 6vw;
+}
+.nextBtn:hover{
+    cursor: pointer;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+/* <weight>: Use a value from 400 to 700 */
+/*
+.div h1 {
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+} */

@@ -1,0 +1,256 @@
+<%-include('./partials/header.ejs')%>
+    <div class="big-div">
+        <!-- <h1>Home Page</h1> -->
+        <div class="main-div" id="main-div">
+            <img src="/images/rides.png" alt="bg-image" id="rideimg">
+            <img src="/images/bgdeliver.jpg" alt="" id="driveimg">
+            <img src="/images/Car-Rentals-in-Paxos.jpg" alt="" id="rentimg">
+        </div>
+        
+    </div>
+
+    <div class="tabs">
+        <button class="commonclss" onclick="opentab(event,'ride')" id="defaultopen"><i class="fa-solid fa-car"
+                style="color: #030303;"></i><br> Ride</button>
+        <button class="commonclss" onclick="opentab(event,'drive')" id="drivetab"><i class="fa-solid fa-signal"
+                style="color: #000000;"></i><br> Drive or deliver</button>
+        <button class="commonclss" onclick="opentab(event,'rent')" id="renttab"><i class="fa-solid fa-key"
+                style="color: #000000;"></i><br> Rent your fleet</button>
+    </div>
+
+    <div class="tab">
+        <div id="ride" class="tabcontent">
+            <h1 class="ride-h1">Request a ride now</h1>
+            <div class="input-container">
+                <span class="icon-circle">
+                    <i class="fa-regular fa-circle"></i>
+                </span>
+                <!-- <span class="filled-circle">
+                    <i class="fa-solid fa-circle" id="filled-circle"></i>
+                </span> -->
+                <input type="text" placeholder="Enter pickup location" id="text">
+                <span class="getlocation"><i class="fa-solid fa-location-arrow"></i></span>
+                <span class="cross-btn"><i class="fa-solid fa-square-xmark" style="color: #000000;"></i></span>
+            </div>
+            <div class="input-container">
+                <span class="icon-circle">
+                    <i class="fa-regular fa-square"></i>
+                    <!-- <i class="fa-solid fa-square"></i> -->
+                </span>
+                <input type="text" class="dest-input" placeholder="Enter Destination"  onkeyup="showbtn()">
+                <span class="cross-btn-dest"><i class="fa-solid fa-square-xmark" style="color: #000000;"></i></span>
+            </div>
+            <a href="/signin-signup-ride"><button class="request" id="req">See prices</button></a>
+        </div>
+
+
+        <div id="drive" class="tabcontent">
+            <h1 class="drive-h1">Get in the driver’s seat and get paid</h1>
+            <p>Drive on the platform with the largest network of active riders.</p>
+            <a href="/signin-signup-Drive"><button class="sign-up">Signup to drive</button></a> <br>
+            <!-- <a href="#">Learn more about driving and delivering</a> -->
+
+        </div>
+
+
+        <div id="rent" class="tabcontent">
+            <h1 class="rent-h1">Make money by renting out your car</h1>
+            <p>Connect with thousands of drivers and earn more per week with Uber’s free fleet management tools.</p>
+            <button class="get-start">Get start</button>
+        </div>
+    </div>
+
+
+
+    <div class="maindiv2">
+        <div class="img">
+            <img class="ny-image" src="/images/call-to-action.jpg" alt="NY image">
+        </div>
+        <div class="content">
+            <h1>The RideEase you know, reimagined for business</h1>
+        </div>
+        <div class="para">
+            <p>A platform for managing global rides and meals, and local deliveries, for companies of any size.</p>
+        </div>
+        <div class="btn">
+            <button>Get start</button>
+        </div>
+    </div>
+
+    <div class="focus">
+        <h1>Focused on safety, wherever you go</h1>
+    </div>
+
+    <div class="two-img">
+        <div class="img1">
+            <img src="/images/Safety_Home_Img2x.jpg" alt="image">
+        </div>
+        <div class="img2">
+            <img src="/images/Cities_Home_Img2x.jpg" alt="image">
+        </div>
+    </div>
+
+    <!-- <div class="div">
+        <div class="left-div">
+            <h4>Our commitment to your safety</h4>
+            <p>With every safety feature and every standard in our Community Guidelines, we're committed to helping to
+                create a safe environment for our users.</p>
+            <div>
+                <a href="#">Read about our Community Guidelines</a>
+                <a href="#">See all safety features</a>
+            </div>
+        </div>
+        <div class="right-div">
+            <h4>Setting 10,000+ cities in motion</h4>
+            <p>The app is available in thousands of cities worldwide, so you can request a ride even when you’re far
+                from home.</p>
+            <a href="#">View all cities</a>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="icon-container">
+        <div class="icon1">
+            <img src="/images/person-multiple-outlined.jpg" alt="icon">
+        </div>
+        <div class="icon2">
+            <img src="/images/document-outlined.jpg" alt="">
+        </div>
+        <div class="icon3">
+            <img src="/images/home-outlined.jpg" alt="">
+        </div>
+    </div> -->
+
+    <!-- <div class="icon-container-content">
+        <div class="content1">
+            <h3>About us</h3>
+            <p>Find out how we started, what drives us, and how we’re reimagining how the world moves.</p>
+            <a href="#">Learn more about RideEase</a>
+        </div>
+        <div class="content2">
+            <h3>Newsroom</h3>
+            <p>See announcements about our latest releases, initiatives, and partnerships.</p>
+            <a href="#">Go to Newsroom</a>
+        </div>
+        <div class="content3">
+            <h3>Global citizenship</h3>
+            <p>Read about our commitment to making a positive impact in the cities we serve.</p>
+            <a href="#">See our partnerships</a>
+        </div>
+    </div> -->
+
+    <div class="rideWithUber">
+        <h1>Ride with RideEase</h1>
+    </div>
+
+    <div class="autoBike">
+        <div class="auto-Container">
+            <div class="auto">
+                <img src="/images/Auto-150X150p4x.jpg" alt="auto img">
+            </div>
+            <div class="auto-content">
+                <h2>RideEase Auto</h2>
+                <p>Get affordable Uber Auto rides with no haggling. Request Uber Auto and ride comfortably around your
+                    city.</p>
+            </div>
+            <div class="arrowicon">
+                <i class='fas fa-arrow-right' style='font-size:24px'></i>
+            </div>
+        </div>
+
+        <div class="bike-container">
+            <div class="bike">
+                <img src="/images/Moto-150X150p4x.jpg" alt="bike img">
+            </div>
+            <div class="bike-content">
+                <h2>RideEase Moto</h2>
+                <p>Get affordable bike rides at your doorstep. Skip the crowd and zip through traffic with Uber Moto.
+                </p>
+            </div>
+            <div class="arrowicon"><i class='fas fa-arrow-right' style='font-size:24px'></i></div>
+        </div>
+
+    </div>
+
+    <div class="Rental-intercity">
+        <div class="rental-Container">
+            <div class="rental">
+                <img src="/images/uber-hourly.jpg" alt="rental img">
+            </div>
+            <div class="rental-content">
+                <h2>RideEase Rentals</h2>
+                <p>Book Rentals to save time with one car and driver for your multi-stop trips.</p>
+            </div>
+            <div class="arrowicon"><i class='fas fa-arrow-right' style='font-size:24px'></i></div>
+        </div>
+
+        <div class="intercity-container">
+            <div class="intercity">
+                <img src="/images/Intercity-150X150p4x.jpg" alt="intercity img">
+            </div>
+            <div class="intercity-content">
+                <h2>RideEase Intercity</h2>
+                <p> Book Intercity to head outstation anytime in convenient and affordable cars.</p>
+            </div>
+            <div class="arrowicon"><i class='fas fa-arrow-right' style='font-size:24px'></i></div>
+        </div>
+    </div>
+
+
+    <!-- <div class="main-container">
+        <div>
+            <h1>It’s easier in the apps</h1>
+        </div>
+
+        <div class="scanner">
+            <div class="left">
+                <div class="QR-code">
+                    <img src="/images/QRCODE.jpg" alt="">
+                </div>
+                <div class="QR-content">
+                    <h2>Download the RideEase app</h2>
+                    <p>Scan to download</p>
+                </div>
+                <div class="arrowicon">
+                    <i class='fas fa-arrow-right' style='font-size:24px'></i>
+                </div>
+            </div>
+            <div class="right">
+                <div class="QR-code">
+                    <img src="/images/QRCODE.jpg" alt="">
+                </div>
+                <div class="QR-content">
+                    <h2>Download the Driver app</h2>
+                    <p>Scan to download</p>
+                </div>
+                <div class="arrowicon">
+                    <i class='fas fa-arrow-right' style='font-size:24px'></i>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="drive-ride">
+        <div class="drive-left">
+            <div class="tag">
+                <a href="/signin-signup-Drive">
+                    <h1>Sign up to drive</h1>
+                </a>
+            </div>
+            <div class="icon-arrow">
+                <i class='fas fa-arrow-right' style='font-size:45px'></i>
+            </div>
+        </div>
+        <div class="ride-right">
+            <div class="tag">
+                <a href="/signin-signup-ride">
+                    <h1>Sign up to ride</h1>
+                </a>
+            </div>
+            <div class="icon-arrow">
+                <i class='fas fa-arrow-right' style='font-size:45px'></i>
+            </div>
+        </div>
+    </div>
+    </div>
+    <%-include('./partials/footer.ejs') %>

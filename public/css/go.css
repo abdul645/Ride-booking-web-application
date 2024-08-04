@@ -1,0 +1,210 @@
+body{
+    overflow-x: hidden;
+}
+.complete-main-div {
+    width: 100%;
+    height: 70vh;
+    /* background-color: violet; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-scroll-div {
+    width: 70vw;
+    height: 84vh;
+    /* background-color: rgb(99, 176, 200); */
+    overflow-y: scroll;
+    margin-top: 23px;
+    padding-bottom: 70px;
+}
+
+.left-scroll-div h1 {
+    margin-left: 40px;
+    font-size: 3vw;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sourse-plus-dest {
+    width: 85%;
+    /* height: 15vh; */
+    border-radius: 10px;
+    border: 2px solid rgb(104, 104, 104);
+    margin: 30px 0 30px 40px;
+    padding: 20px 0px 10px 20px;
+
+}
+.sourse-plus-dest:hover{
+    cursor: pointer;
+}
+
+.sourse-plus-dest span {
+    font-weight: 600;
+    /* padding: 0px 0px 30px 0px; */
+}
+
+.sourse-plus-dest i {
+    margin: 0 8px;
+}
+
+.sourse-plus-dest p {
+    margin: 5px 0px;
+}
+
+.left-scroll-div h2 {
+    margin-left: 40px;
+}
+
+/* .rc{
+    border: black;
+    border: 2px solid rgb(104, 104, 104);
+} */
+.Recommended-share{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    height: 20vh;
+    margin: 30px 0 30px 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    /* border: none; */
+
+    /* background-color: rgb(26, 60, 49); */
+}
+.Recommended-share:hover{
+    cursor: pointer;
+    border: 2px solid rgb(104, 104, 104);
+    transition: .7s;
+}
+
+.Recommended-share img {
+    width: 9vw;
+    padding: 20px 0 20px 15px;
+    /* background-color: aqua; */
+}
+
+.bk-content {
+    width: 20vw;
+    /* background-color: magenta; */
+}
+
+.bk-content span p {
+    font-weight: 700;
+    font-size: 2.1vw;
+    /* padding-top: 15px; */
+    /* line-height: 4vw; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.bk-content p {
+    font-size: 1.1vw;
+}
+
+.bk-price {
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+/* map code  */
+.right-div-map {
+    margin: 20px;
+    width: 70vw;
+    height: 43vw;
+    /* background-color: blueviolet; */
+}
+
+.map-area {
+    width: 100%;
+    height: 100%;
+    /* margin: 20px; */
+    /* border: 2px solid black; */
+    /* background-color: violet; */
+}
+
+.mapp {
+    width: 95%;
+    height: 100%;
+    border: 2px solid black;
+    /* background-color: yellowgreen; */
+}
+#mapppp {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    /* background-color: yellowgreen; */
+
+}
+
+
+/* scroll bar code design  */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #838383;
+    border-radius: 10px;
+    
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #777575;
+}
+
+.req-ride{
+    width: 42%;
+    height: 15vh;
+    display: flex;
+    border-radius: 15px;
+    margin-left: 40px;
+    bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pay-method{
+    font-size: 1.2vw;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.pay-method img{
+    width: 1.5vw;
+    margin-right: 10px;
+}
+.pay-method span i{
+    position: absolute;
+    margin-top: 11px;
+    font-size: 1.2vw;
+}
+.pay-method:hover{
+    cursor: pointer;
+}
+.req-btn{
+    margin: 10px 20px;
+}
+.req-btn button{
+    padding: 15px 50px;
+    font-size: 1.2vw;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+.req-btn button:hover{
+    cursor: pointer;
+}

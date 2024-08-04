@@ -1,0 +1,170 @@
+<%-include('./partials/AllDocumentsHeader.ejs')%>
+    <form method="post" action="/AllDriverDocuments" id="uploadForm" enctype="multipart/form-data">
+        <div>
+            <!-- email -->
+            <div class="input-box-driver" id="gapFromLeft">
+                <span class="icon-driver"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" id="email1" required>
+                <label id="email-driver">Email</label>
+                <small>error msg</small>
+            </div>
+
+
+
+            <div class="major-div">
+                <div class="card">
+                    <div class="card-nav">
+                        <div><a href="/driverDetails"><i class="fa-solid fa-arrow-left"></i></a></div>
+                        <div>
+                            <p>Driving License</p>
+                        </div>
+
+                    </div>
+                    <h2>Let’s find your Driving License</h2>
+                    <p class="para">Your photo didn't show the document we requested. Please take a new photo of your
+                        Driving
+                        License - Front
+                    </p>
+                    <img src="/images/DL.png" alt="dl-image" name="LicenceImage" class="img">
+
+                    <input type="file" name="LicenseImageName" class="UploadFile btn"></input>
+
+                </div>
+
+            </div>
+
+
+            <!-- profile photo -->
+            <div class="major-div">
+                <div class="card">
+                    <div class="card-nav">
+                        <div><i class="fa-solid fa-arrow-left"></i></div>
+                        <div>
+                            <p>profile photo</p>
+                        </div>
+                    </div>
+                    <h2>Take your profile photo</h2>
+                    <p class="para">
+                        Your profile photo helps people recognise you. Please note that once you have submitted your
+                        profile
+                        photo, it cannot be changed.</p>
+                    <p class="para2">1. Face the camera and make sure your eyes and mouth are clearly visible</p>
+                    <p class="para2">2. Make sure the photo is well lit, free of glare and in focus</p>
+                    <p class="para2">3. No photos of a photo, filters or alterations</p>
+                    <img src="/images/profile_photo_global.png" alt="Profile image" class="imgProfile">
+                    <input type="file" class="UploadFile btn" name="ProfileImageName"
+                        accept="image/png, image/jpeg"></input>
+                </div>
+            </div>
+
+
+
+            <!-- imgPanCard -->
+
+            <div class="major-div">
+                <div class="card">
+                    <div class="card-nav">
+                        <div><i class="fa-solid fa-arrow-left"></i></div>
+                        <div>
+                            <p>PAN card</p>
+                        </div>
+                    </div>
+                    <h2>Let’s find your PAN card</h2>
+                    <p class="para">
+                        Enter your PAN card number and we'll get the required information from the NSDL, or you can
+                        upload your PAN card instead.</p>
+
+                    <img src="/images/indiaPanCard.png" alt="dl image" class="imgPanCard">
+                    <p class="pan-label">PAN card number</p>
+                    <input type="text" class="TextField" name="PanInput" placeholder="ABCCD1234Z">
+                    <div class="bottom-div">
+                        <input type="file" class="UploadFile btn" name="PanCardImageName"
+                            accept="image/png, image/jpeg"></input>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- RC       -->
+            <div class="major-div">
+                <div class="card">
+                    <div class="card-nav">
+                        <div>
+                            <p>Registration Certificate (RC)</p>
+                        </div>
+
+                    </div>
+                    <h2>Take a photo of your Registration Certificate (RC)</h2>
+                    <p class="para">
+                        If the vehicle owner name on the vehicle documents is different from mine, then I hereby confirm
+                        that I
+                        have the vehicle owner's consent to drive this vehicle on the RideEase Platform. This
+                        declaration
+                        can be
+                        treated as a No-Objection Certificate and releases RideEase from any legal obligations and
+                        consequences.</p>
+                    <img src="/images/RC.png" alt="dl image" class="RCimg">
+                    <input type="file" class="UploadFile btn" name="RCImageName" accept="image/png, image/jpeg"></input>
+                </div>
+            </div>
+
+
+            <!-- Insurance  -->
+            <div class="major-div">
+                <div class="card">
+                    <div class="card-nav">
+                        <div><i class="fa-solid fa-arrow-left"></i></div>
+                        <div>
+                            <p>Vehicle Insurance</p>
+                        </div>
+
+
+                    </div>
+                    <h2>Take a photo of your Vehicle Insurance</h2>
+                    <p class="para">
+                        Make sure photo is not blurred and these details are clearly visible: model, vehicle number,
+                        chassis
+                        number, registration name, start date, expiration date, financier name or company name. You may
+                        need to
+                        submit additional photos if your document has multiple pages or sides or if the first image was
+                        not
+                        clear.
+
+                    </p>
+                    <img src="/images/InsuranceDocument.jpg" alt="dl image" class="imgInsurance">
+                    <input type="file" class="UploadFile btn" name="InsuranceImageName"
+                        accept="image/png, image/jpeg"></input>
+                </div>
+            </div>
+
+
+
+            <!--  vehicle Image -->
+            <div class="major-div">
+                <div class="card">
+                    <div class="card-nav">
+                        <div><i class="fa-solid fa-arrow-left"></i></div>
+                        <div>
+                            <p>Vehicle Image</p>
+                        </div>
+                    </div>
+                    <h2>Take a photo of your Vehicle </h2>
+
+                    <img src="/images/vehicleimg.png" alt="dl image" class="vehicleImage">
+                    <input type="text" class="TextField" id="VehicleName" name="VehicleName" placeholder="Vehicle Type eq. Bike, Car, XlCar, SedanCar">
+
+                    <input type="file" class="UploadFile btn" name="vehicleImageName"
+                        accept="image/png, image/jpeg"></input>
+                </div>
+            </div>
+
+            <div class="bottomDiv">
+                <div class="leftDiv">
+                    <a href="/driverDetails"> <input type="button" value="Back" class="BackBtn"></a>
+                </div>
+                <div class="rightDiv">
+                    <a href="/HomeDriver"><button type="submit" class="submitButton">Submit</button></a>
+                </div>
+            </div>
+        </div>
+    </form>

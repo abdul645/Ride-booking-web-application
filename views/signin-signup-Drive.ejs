@@ -1,0 +1,32 @@
+<%- include('./partials/signin-signup-Drive-Header.ejs')%>
+    <link rel="stylesheet" href="/css/signin-signup-Drive.css">
+    <!-- <input type="button" value="Close" onclick="window.close()" / -->
+
+    <div class="whole-div">
+        <button class="close-btn" id="close-signupdiv">&times;</button> <!--cross sign --->
+
+        <div class="mainnn" >
+            <a href="/driverSignup" class="driverSignup">
+                <div class="mainLeft" id="popup-driver">
+                    <div class="ml1">
+                        <h1>Create a driver account</h1>
+                    </div>
+                    <div class="mr1">
+                        <i class='fas fa-arrow-right' style='font-size:40px'></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/driverSignin" class="driverSignup">
+                <div class="mainRight" id="popup-rider">
+                    <div class="ml1">
+                        <h1>Sign in to drive</h1>
+                    </div>
+                    <div class="mr1">
+                        <i class='fas fa-arrow-right' style='font-size:40px'></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="/js/signin-signup-Drive.js"></script> 

@@ -1,0 +1,134 @@
+<%-include('./partials/Ride-Home-Header.ejs')%>
+
+
+<div class="dropdown-menu" id="menu">
+    <div class="sub-menu">
+        <div class="user-info">
+            <img src="images/avatar.png" alt=""   class="profileThumbnail">
+            <h2><%= username%></h2>
+        </div>
+        <hr>
+        <a href="#" class="sub-menu-link">
+            <img src="images/EditProfile.png" alt="">
+            <p>Edit Profile</p>
+            <span>
+                <i class="fa-solid fa-chevron-right"></i> 
+             </span>
+        </a>
+        <a href="#" class="sub-menu-link">
+            <img src="images/settings.png" alt="">
+            <p>Seetting & privacy</p>
+            <span>
+                <i class="fa-solid fa-chevron-right"></i> </span>
+        </a>
+        <a href="#" class="sub-menu-link">
+            <img src="images/question.png" alt="">
+            <p>help & support</p>
+            <span> 
+                <i class="fa-solid fa-chevron-right"></i>
+             </span>
+        </a>
+        <a href="#" class="sub-menu-link">
+            <img src="images/file.png" alt="">
+            <p>History</p>
+            <span> 
+                <i class="fa-solid fa-chevron-right"></i> </span>
+        </a>
+        <a href="/" class="sub-menu-link">
+            <img src="images/logout.png" alt="">
+            <p>Logout</p>
+            <span> 
+                <i class="fa-solid fa-chevron-right"></i> </span>
+        </a>
+    </div>
+</div>
+    <div id="maindiv2" class="maindiv">
+        <div class="img">
+            <img class="ny-image" src="/images/call-to-action.jpg" alt="NY image">
+        </div>
+        <div class="content">
+            <h1>The RideEase you know, reimagined for business</h1>
+        </div>
+        <div class="para">
+            <p>A platform for managing global rides and meals, and local deliveries, for companies of any size.</p>
+        </div>
+        <a href="/Ride">
+            <div class="btn">
+                <button>Get start</button>
+            </div>
+        </a>
+    </div>
+
+    <div class="focus">
+        <h1>Focused on safety, wherever you go</h1>
+    </div>
+
+    <div class="two-img">
+        <div class="img1">
+            <img src="/images/Safety_Home_Img2x.jpg" alt="image">
+        </div>
+        <div class="img2">
+            <img src="/images/Cities_Home_Img2x.jpg" alt="image">
+        </div>
+    </div>
+
+ 
+    <div class="rideWithUber">
+        <h1>Ride with RideEase</h1>
+    </div>
+
+    <div class="autoBike">
+        <div class="auto-Container">
+            <div class="auto">
+                <img src="/images/Auto-150X150p4x.jpg" alt="auto img">
+            </div>
+            <div class="auto-content">
+                <h2>RideEase Auto</h2>
+                <p>Get affordable Uber Auto rides with no haggling. Request Uber Auto and ride comfortably around your
+                    city.</p>
+            </div>
+            <div class="arrowicon">
+                <i class='fas fa-arrow-right' style='font-size:24px'></i>
+            </div>
+        </div>
+
+        <div class="bike-container">
+            <div class="bike">
+                <img src="/images/Moto-150X150p4x.jpg" alt="bike img">
+            </div>
+            <div class="bike-content">
+                <h2>RideEase Moto</h2>
+                <p>Get affordable bike rides at your doorstep. Skip the crowd and zip through traffic with Uber Moto.
+                </p>
+            </div>
+            <div class="arrowicon"><i class='fas fa-arrow-right' style='font-size:24px'></i></div>
+        </div>
+
+    </div>
+
+    <div class="Rental-intercity">
+        <div class="rental-Container">
+            <div class="rental">
+                <img src="/images/uber-hourly.jpg" alt="rental img">
+            </div>
+            <div class="rental-content">
+                <h2>RideEase Rentals</h2>
+                <p>Book Rentals to save time with one car and driver for your multi-stop trips.</p>
+            </div>
+            <div class="arrowicon"><i class='fas fa-arrow-right' style='font-size:24px'></i></div>
+        </div>
+
+        <div class="intercity-container">
+            <div class="intercity">
+                <img src="/images/Intercity-150X150p4x.jpg" alt="intercity img">
+            </div>
+            <div class="intercity-content">
+                <h2>RideEase Intercity</h2>
+                <p> Book Intercity to head outstation anytime in convenient and affordable cars.</p>
+            </div>
+            <div class="arrowicon"><i class='fas fa-arrow-right' style='font-size:24px'></i></div>
+        </div>
+    </div>
+    </div>
+    <%-include('./partials/footer.ejs') %>
+    <script src="js/HomeRide_js_file.js"></script>
