@@ -1,44 +1,34 @@
 import DriverDocumentModel from "../models/DriverDocuments.js";
 
 const goController = async (req, res) => {
-    // const { username, pickup, dropoff, bikePrice, miniPrice, sedanPrice, topSedanPrice, xlPrice } = req.session;
-    
-    // try{
-    //     const result = await DriverDocumentModel.find();
-    //     res.render("go", {data: result, 
-    //         title: 'Go for a ride',
-    //         username: req.session.username,
-    //         pickup: req.body.pickup, // Ensure pickup location is passed
-    //         dropoff: req.body.dropoff,
-    //         bikePrice: req.body.bikePrice,
-    //         // miniPrice: req.body.miniPrice,
-    //         // sedanPrice: req.body.sedanPrice,
-    //         // topSedanPrice: req.body.topSedanPrice,
-    //         // xlPrice: req.body.xlPrice
-        
-    // }) 
-    // }catch(err){
-    //     console.log(err);
-    // }
-    
-    res.render('go', { 
-        title: 'Go for a ride',
-        username: req.session.username,
-        pickup: req.body.pickup, // Ensure pickup location is passed
-        dropoff: req.body.dropoff,
-        bikePrice: req.body.bikePrice,
-        miniPrice: req.body.miniPrice,
-        sedanPrice: req.body.sedanPrice,
-        topSedanPrice: req.body.topSedanPrice,
-        xlPrice: req.body.xlPrice
-    });
+
+    const result = await DriverDocumentModel.find();
+    if (req.session.routeData) {
+        res.render('go', {
+            data: result,
+            title: 'Select Ride',
+            username: req.session.username,
+            pickup: req.session.routeData.pickup,
+            dropoff: req.session.routeData.dropoff,
+            bikePrice: req.session.routeData.bikePrice,
+            miniPrice: req.session.routeData.miniPrice,
+            sedanPrice: req.session.routeData.sedanPrice,
+            topSedanPrice: req.session.routeData.topSedanPrice,
+            xlPrice: req.session.routeData.xlPrice,
+            routeData: JSON.stringify(req.session.routeData.route) // Pass routeData as a JSON string
+        });
+    } else {
+        res.render('go', {
+            title: 'Select Ride',
+            username:'',
+            pickup: '',
+            dropoff: '',
+            bikePrice: 0,
+            routeData: null // Handle case where there is no route data
+        });
+    }
+
 };
 
 export { goController };
 
-// const homeDriverController = (req, res) => {
-//     const username = req.session.username;
-//     res.render('HomeDriver', { title: 'Driver Dashboard', username });
-// };
-
-// export { homeDriverController };

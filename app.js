@@ -8,10 +8,23 @@ import connectDB from './db/connectdb.js';
 import web from './routes/web.js'
 import http from 'http'; // Import http
 import { Server } from 'socket.io';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+
 
 const app = express(); // Create an Express application
 const port = process.env.PORT || "8000";
 const DATABASE_URL = process.env.DATABASE_URL || "mongodb://127.0.0.1:27017"
+
+
+// Get __dirname equivalent in ES module
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+// app.use('/go', express.static(path.join(__dirname), 'public', 'uploads'))
+
+
 // connecting mongodb 
 connectDB(DATABASE_URL)
 
@@ -21,20 +34,26 @@ app.use(cors());
 
 
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+    cors: {
+        origin: "http://localhost:8000",
+        methods: ["GET", "POST"]
+    }
+})
 
-// Your other routes and middleware
+const HomeDriverNameSpace = io.of('/homeDriver')
 
-io.on('connection', (socket) => {
+HomeDriverNameSpace.on('connection', (socket) => {
     console.log('A user connected');
+    
+    socket.on('/RequestRidePopup', function(data){
+        console.log('Received RequestRidePopup:', data);
+        HomeDriverNameSpace.emit("RequestRidePopup", data)
+        
+    })
 
     socket.on('disconnect', () => {
-        console.log('A user disconnected');
-    });
-
-    socket.on('rideRequest', (data) => {
-        // Handle the ride request event and emit it to the driver
-        io.emit('newRideRequest', data);
+        console.log('A user disconnected: ', socket.id);
     });
 });
 
@@ -75,6 +94,24 @@ app.get('/HomeRide', (req, res) => {
     }
 });
 
+
+
+// Route for Ride, protected by session check
+app.get('/Ride', (req, res) => {
+    if (req.session.username) {
+        res.render('Ride', {
+            title: 'Ride',
+            username: req.session.username
+        });
+    } else {
+        // swal("Welcome! ", "Successfully created","success");
+        res.redirect('/Ride');
+    }
+});
+
+
+
+
 // Route for HomeDrive, protected by session check
 app.get('/HomeDriver', (req, res) => {
     if (req.session.username) {
@@ -87,47 +124,47 @@ app.get('/HomeDriver', (req, res) => {
     }
 });
 
-app.get('/go', (req, res) => {
+// app.get('/go', (req, res) => {
 
-    if (req.session.routeData) {
-        res.render('go', {
-            title: 'Select Ride',
-            pickup: req.session.routeData.pickup,
-            dropoff: req.session.routeData.dropoff,
-            bikePrice: req.session.routeData.bikePrice,
-            miniPrice: req.session.routeData.miniPrice,
-            sedanPrice: req.session.routeData.sedanPrice,
-            topSedanPrice: req.session.routeData.topSedanPrice,
-            xlPrice: req.session.routeData.xlPrice,
-            routeData: JSON.stringify(req.session.routeData.route) // Pass routeData as a JSON string
-        });
-    } else {
-        res.render('go', {
-            title: 'Select Ride',
-            pickup: '',
-            dropoff: '',
-            bikePrice: 0,
-            routeData: null // Handle case where there is no route data
-        });
-    }
-    // res.render('go', {
-    //     title: 'Select Ride',
-    //     pickup: req.session.pickup,
-    //     dropoff: req.session.dropoff,
-    //     bikePrice: req.session.bikePrice,
-    //     miniPrice: req.session.miniPrice,
-    //     sedanPrice: req.session.sedanPrice,
-    //     topSedanPrice: req.session.topSedanPrice,
-    //     xlPrice: req.session.xlPrice,
-    // });
-});
+//     if (req.session.routeData) {
+//         res.render('go', {
+//             title: 'Select Ride',
+//             username: req.session.username,
+//             pickup: req.session.routeData.pickup,
+//             dropoff: req.session.routeData.dropoff,
+//             bikePrice: req.session.routeData.bikePrice,
+//             miniPrice: req.session.routeData.miniPrice,
+//             sedanPrice: req.session.routeData.sedanPrice,
+//             AutoPrice: req.session.routeData.AutoPrice,
+//             xlPrice: req.session.routeData.xlPrice,
+//             routeData: JSON.stringify(req.session.routeData.route) // Pass routeData as a JSON string
+//         });
+//     } else {
+//         res.render('go', {
+//             title: 'Select Ride',
+//             username:'',
+//             pickup: '',
+//             dropoff: '',
+//             bikePrice: 0,
+//             routeData: null // Handle case where there is no route data
+//         });
+//     }
+//     // res.render('go', {
+//     //     title: 'Select Ride',
+//     //     pickup: req.session.pickup,
+//     //     dropoff: req.session.dropoff,
+//     //     bikePrice: req.session.bikePrice,
+//     //     miniPrice: req.session.miniPrice,
+//     //     sedanPrice: req.session.sedanPrice,
+//     //     topSedanPrice: req.session.topSedanPrice,
+//     //     xlPrice: req.session.xlPrice,
+//     // });
+// });
 
 // ********************************************************************************
 
 // load the routes
 app.use('/', web)
-
-
 
 // to serve static files 
 app.use(express.static('public'))

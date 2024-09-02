@@ -47,7 +47,7 @@ const DocumentSchema = new mongoose.Schema({
     },
     VehicleName:{
         type: String,
-        unique: true,
+        required: true
     },
     VehicleImage:{
         type: String,

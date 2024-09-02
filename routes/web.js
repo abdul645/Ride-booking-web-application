@@ -28,6 +28,8 @@ import { AllDriverDocumentsController } from '../controllers/AllDriverDocumentsC
 import { AllDriverDocument } from '../controllers/AllDriverDocument.js';
 import { HomeRideController } from '../controllers/HomeRideController.js';
 import { searchController } from '../controllers/searchController.js';
+
+
 import multer from 'multer';
 
 var storage = multer.diskStorage({
@@ -63,7 +65,7 @@ router.post('/rideSignin', rideSigninController)
 
 router.get('/Ride', RideController)
 router.post('/Ride', searchController);
-// router.get('/go', goController)
+router.get('/go', goController)
 router.post('/go', searchController)
 
 

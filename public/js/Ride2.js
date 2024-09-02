@@ -2,6 +2,7 @@
 // DOMContentLoaded Event: Ensure that your entire initialization script (initMap) is wrapped inside a
 //  DOMContentLoaded event listener to ensure it runs only after the DOM is fully loaded.
 
+
 // console.log("hii");
 // Initialize and add the map
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const bikePrice = distanceInKm * 10;
                         const miniPrice = distanceInKm * 14;
                         const sedanPrice = distanceInKm * 18;
-                        const topSedanPrice = distanceInKm * 22;
+                        const topSedanPrice = distanceInKm * 12;
                         const xlPrice = distanceInKm * 25;
                         //  if(distanceInKm <= 5){
                         //     const bikePrice = distanceInKm * 10;
@@ -122,8 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }
                             })
                             .catch(error => console.error('Failed to fetch route data:', error));
-
-
                     } else {
                         //delete route from map
                         directionsDisplay.setDirections({ routes: [] });
@@ -180,10 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     loadingBar.classList.remove('enable-loader-container');
                     window.location.href = '/go'; // Redirect to /go after 5 seconds
 
-                }, 3000); // 5000 milliseconds = 5 seconds
+                }, 3000); // 3000 milliseconds = 3 seconds
 
 
-                // Reload the page after a delay (e.g., 5 seconds)
+                // Reload the page after a delay (e.g., 6 seconds)
                 setTimeout(() => {
                     window.location.reload(true); // true to force reload from the server
                 }, 6000); // Adjust the delay as per your requirement

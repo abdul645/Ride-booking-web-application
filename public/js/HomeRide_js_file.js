@@ -3,7 +3,7 @@ const menu = document.querySelector('#menu');
 
   
 
-//to show or hide profilr dropdown 
+//to show or hide profile dropdown 
 const Showdropdown = () =>{
    menu.classList.toggle('enable-nav-right');
 }

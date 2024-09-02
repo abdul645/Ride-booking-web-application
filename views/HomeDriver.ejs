@@ -62,13 +62,17 @@
                 <div id="map">
                     <!-- <img src="/images/drive dashboard.jpg" alt="image"> -->
                 </div>
-                <div class="popup-div" id="requestPopup" style="transform: scale(0);">
+
+
+                <div class="popup-div" id="requestPopup">
                     <div class="Thumbnail-Name">
                         <div class="Name-logo">
-                            <p><%= username.charAt(0) %></p>
+                            <p id="nameIcon"> <%= username.charAt(0) %> </p>
+                            <!-- <%= username.charAt(0) %>
+                            <%= username %> -->
                         </div>
                         <div class="name">
-                            <span id="name"><%= username %></span>
+                            <span id="name">  <%= username %>  </span>
                             <p>3 Kms away | 12 mins</p>
                         </div>
                         <div class="rating">
@@ -80,12 +84,13 @@
                         <h6 class="pickup">
                             Pickup From
                         </h6>
-                        <p class="address">
-                        </p>
+                        <p class="address">   </p>
                     </div>
                     <div class="accept-reject">
                         <button class="accept-btn">Accept</button>
+                        <a href="">
                         <button class="reject-btn">Reject</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -134,7 +139,6 @@
 
     </div>
     <%-include('./partials/footer.ejs') %>
-        <script src="/js/HomeDriver_js_file.js"></script>
 
         <!-- for leaflet js library  -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -148,7 +152,7 @@
         <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 
-        <script src="/socket.io/socket.io.js"></script>
-
+        <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+        <script src="/js/HomeDriver_js_file.js"></script>
         <script src="/js/HomeDriver_js_file2.js"></script>
-        <script src="/js/go.js"></script>
+        <!-- <script src="/js/go.js"></script> -->

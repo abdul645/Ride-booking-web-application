@@ -84,7 +84,7 @@ function getPosition(position){
     map.fitBounds(featureGroup.getBounds())
     
     cm.addTo(map).bindPopup([lat, lng]);
-      // Set the map view to the new position with a zoom level of 12
+      // Set the map view to the new position with a zoom level of 15
     //   map.setView([lat, lng], 15);
 
        // Log the current zoom level

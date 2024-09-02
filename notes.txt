@@ -209,3 +209,12 @@ Error creating user: MongoServerError: not authorized on Driver-Rides-Details-Da
 
 solution 1 - authorized user by using commands
 solution2 - C:\Program Files\MongoDB\Server\7.0\bin\mongod.cfg  comment authorization section 
+
+
+
+
+<!-- api key  -->
+    <!-- AIzaSyCMYxNb-KY9qw7SP5QyuOjsy_W49eqOrM8 -->
+    <!-- AIzaSyC1axf4zYIq2U4sEpylcHeztnQDLGQ0xH0 -->
+    <!-- AIzaSyCkuno4PSFWqURj7f7AXoOoIQvLiey7xn4 -->
+    <!-- AIzaSyDc3bkeZE2zHYfsjX-A0NoTX3evZfkPsaI&libraries=geometry,places,drawing -->

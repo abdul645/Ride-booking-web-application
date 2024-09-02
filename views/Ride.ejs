@@ -1,5 +1,49 @@
 <%- include('./partials/Ride-header.ejs')%>
     <link rel="stylesheet" href="/css/Ride.css">
+    <link rel="stylesheet" href="/css/DriveHome.css">    
+
+
+    <div class="dropdown-menu" id="menu">
+        <div class="sub-menu">
+            <div class="user-info">
+                <img src="images/avatar.png" alt=""   class="profileThumbnail">
+                <h2><%= username%></h2>
+            </div>
+            <hr>
+            <a href="#" class="sub-menu-link">
+                <img src="images/EditProfile.png" alt="">
+                <p>Edit Profile</p>
+                <span>
+                    <i class="fa-solid fa-chevron-right"></i> 
+                 </span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="images/settings.png" alt="">
+                <p>Seetting & privacy</p>
+                <span>
+                    <i class="fa-solid fa-chevron-right"></i> </span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="images/question.png" alt="">
+                <p>help & support</p>
+                <span> 
+                    <i class="fa-solid fa-chevron-right"></i>
+                 </span>
+            </a>
+            <a href="#" class="sub-menu-link">
+                <img src="images/file.png" alt="">
+                <p>History</p>
+                <span> 
+                    <i class="fa-solid fa-chevron-right"></i> </span>
+            </a>
+            <a href="/" class="sub-menu-link">
+                <img src="images/logout.png" alt="">
+                <p>Logout</p>
+                <span> 
+                    <i class="fa-solid fa-chevron-right"></i> </span>
+            </a>
+        </div>
+    </div>
     <div class="Ride-Container">
         <div class="search-area">
             <form action="/Ride" method="POST" id="rideForm">
@@ -25,7 +69,7 @@
                         <span class="cross-icon-drop" id="dropoff-icon"><i class="fa-solid fa-square-xmark"
                                 style="color: #000000;"></i></span>
                     </div>
-                    <button type="submit" class="btn-search">Search</button> 
+                    <button type="submit" class="btn-search" id="searchBtn" disabled>Search</button> 
                      
                     <div class="loader-container">
                         <div class="loader"></div>

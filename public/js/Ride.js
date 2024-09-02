@@ -1,30 +1,33 @@
-
-// if (pickupInput.value == null && destInput.value == null) {
-//     // disable search button 
-//     const disableButton = true; //change this value to false and the button will be clickable
-//     const button = document.querySelector('.btn-search');
-//     if (disableButton) button.disabled = "disabled";
-// }
-// else{
-//     // enable search button 
-// const disableButton = false; //change this value to false and the button will be clickable
-// const button = document.querySelector('.btn-search');
-// if (disableButton) button.enabled = "enabled";
-// }
-
-
 // to enable search button
 const btn_search = document.querySelector('.btn-search')
 const textPickup = document.querySelector('#text-pickup')
 const textDropoff = document.querySelector('#text-dropoff')
 
-textDropoff.addEventListener('keyup', (e) => {
-  const value = e.currentTarget.value;
-  btn_search.disabled = false;
-  if (value === '') {
-    btn_search.disabled = true;
-  }
-})
+function toggleSearchButton(){
+  const pickupValue = textPickup.value.trim();
+  const dropoffvalue = textDropoff.value.trim();
+  btn_search.disabled = !(pickupValue && dropoffvalue)
+}
+
+textPickup.addEventListener('keyup', toggleSearchButton)
+textDropoff.addEventListener('keyup', toggleSearchButton)
+
+
+
+//to show or hide profile dropdown
+const nav_right = document.querySelector('.nav-right');
+const menu = document.querySelector('#menu');
+
+ 
+const Showdropdown = () =>{
+   menu.classList.toggle('enable-nav-right');
+}
+nav_right.addEventListener('click', Showdropdown)
+
+//to show or hide profile dropdown
+
+
+
 
 //onkeyup event to show close buttn
 const text_pickup = document.querySelector('#text-pickup')
@@ -63,7 +66,8 @@ pickup_icon.addEventListener('click', ClearPickupInput)
 
 
 
-// to clear input box of pickup location
+
+// to clear input box of destination location
 const dropoff_icon = document.querySelector('#dropoff-icon')
 const destInput = document.querySelector('.dest-input');
 const CleardropInput = () => {
@@ -73,12 +77,16 @@ const CleardropInput = () => {
 dropoff_icon.addEventListener('click', CleardropInput)
 
 
-// }
+
 // cross_icon_pick.addEventListener('click', clear);
 var cross_icon_pick = document.querySelector('.cross-icon-pickup');
 var inputs = document.querySelector('input');
 
+
+
+
 // get user current loaction on click on icon and change icon 
+
 var getLocation = () => {
   getlocationicon.classList.add('disablelocationarrow');
   cross_icon_pickup.classList.add('enable-cross-icon-pickup')

@@ -5,7 +5,7 @@ const AllDriverDocument = async (req, res) => {
 
         console.log('Received data:', req.body);     
         
-        const {email, PanInput,VehicleName} = req.body;
+        const {email, PanInput, VehicleName} = req.body;
 
         // Creating a new instance of  model
         const doc = new DriverDocumentModel({

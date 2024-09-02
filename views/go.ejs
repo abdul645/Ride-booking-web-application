@@ -12,22 +12,54 @@
                 <p>Leave Now</p>
             </div>
             <h2>Recommended</h2>
-            <div class="Recommended-share" id="Bike">
+            <!-- <%# Show All data %> this is comment  -->
+            <% data.forEach((item)=> { %>
+            <div class="Recommended-share" id="<%= item.VehicleName %>" data-id="<%= item._id %>">
                 <div class="bk">
-                    <img src="/images/Uber_Moto_India1.png" alt="">
+                    <!-- <%= item.VehicleImage %>⬅️ it will fetch the name of image from mongodb -->
+                     <!-- it will fetch ⬇️ the image from the uploads directory -->
+                    <img src="/uploads/<%= item.VehicleImage %>" alt="img">
                 </div>
                 <div class="bk-content">
                     <span>
-                        <p>BikeShare</p>
+                        <p><%= item.VehicleName %></p>
                     </span>
                     <p>4 mins away</p>
-                    <p>Affordable, motorcycle rides</p>
+                    <p>Affordable rides</p>
                 </div>
-                <div class="bk-price">₹ <%= bikePrice %></div>
+                <div class="bk-price">
+
+                    <% if (item.VehicleName == "Bike") { %>
+
+                            <div class="bk-price">₹ <%= bikePrice %></div>
+                    
+                    <% } else if(item.VehicleName == "Car") { %>
+                    
+                            <div class="bk-price">₹ <%= miniPrice %></div>
+                    
+                    <% } else if(item.VehicleName == "GoSedan") { %>
+                    
+                            <div class="bk-price">₹ <%= sedanPrice %></div>
+                    
+                    <% } else if(item.VehicleName == "Auto") { %>
+                
+                            <div class="bk-price">₹ <%= topSedanPrice %></div>
+
+                    <% } else if(item.VehicleName == "RideEaseXL") { %>
+                
+                            <div class="bk-price">₹ <%= xlPrice %></div>
+                       
+                    <% } else { %>
+                    
+                            <div class="bk-price">Price not available</div>
+                    
+                    <% } %>
+                </div>
             </div>
+            <% }) %>
 
 
-            <div class="Recommended-share" id="minicar">
+            <!-- <div class="Recommended-share" id="minicar">
                 <div class="bk">
                     <img src="/images/UberGo_v1.png" alt="">
                 </div>
@@ -82,7 +114,7 @@
                     <p>Affordable, SUV rides</p>
                 </div>
                 <div class="bk-price">₹<%= xlPrice %></div>
-            </div>
+            </div> -->
         </div>
 
         <!-- <div class="req-ride">
@@ -104,20 +136,21 @@
             <!-- <div class="map-area">
                 <div class="mapp" id="mapppp">
                  
-                </div>
+                </div
             
             </div> -->
             <%- include('./partials/sideBarMap.ejs')%>
         </div>
 
     </div>
-<!-- <script id="route-data" type="application/json">
-    <%- JSON.stringify(routeData) %>
-</script> -->
+
+    <script>
+        var nameIcon = "<%= username[0] %>";       
+        var username = "<%= username %>";
+        var pickupLoc = "<%= pickup %>";
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMYxNb-KY9qw7SP5QyuOjsy_W49eqOrM8&libraries=places" async defer></script>
 
-
-
-
-    <script src="/js/Ride2.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
     <script src="/js/go.js"></script>
+    <script src="/js/Ride2.js"></script>

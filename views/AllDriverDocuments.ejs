@@ -59,7 +59,7 @@
 
 
 
-            <!-- imgPanCard -->
+            <!-- img PanCard -->
 
             <div class="major-div">
                 <div class="card">
@@ -76,7 +76,7 @@
 
                     <img src="/images/indiaPanCard.png" alt="dl image" class="imgPanCard">
                     <p class="pan-label">PAN card number</p>
-                    <input type="text" class="TextField" name="PanInput" placeholder="ABCCD1234Z">
+                    <input type="text" class="TextField" id="PanTextField" name="PanInput" placeholder="ABCCD1234Z">
                     <div class="bottom-div">
                         <input type="file" class="UploadFile btn" name="PanCardImageName"
                             accept="image/png, image/jpeg"></input>
@@ -151,8 +151,15 @@
                     <h2>Take a photo of your Vehicle </h2>
 
                     <img src="/images/vehicleimg.png" alt="dl image" class="vehicleImage">
-                    <input type="text" class="TextField" id="VehicleName" name="VehicleName" placeholder="Vehicle Type eq. Bike, Car, XlCar, SedanCar">
-
+                    <!-- <input type="text" class="TextField" id="VehicleName" name="VehicleName" placeholder="Vehicle Type eq. Bike, Car, XlCar, SedanCar"> -->
+                    <select id="VehicleName" name="VehicleName" class="TextField" >
+                        <option value="">---select---</option>
+                        <option value="Car">Car</option>
+                        <option value="Bike">Bike</option>
+                        <option value="GoSedan">GoSedan</option>
+                        <option value="RideEaseXL">RideEaseXL</option>
+                        <option value="Auto">Auto</option>
+                      </select>
                     <input type="file" class="UploadFile btn" name="vehicleImageName"
                         accept="image/png, image/jpeg"></input>
                 </div>
@@ -168,3 +175,6 @@
             </div>
         </div>
     </form>
+
+
+    <script src="/js/driverDocument.js"></script>

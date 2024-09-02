@@ -123,7 +123,7 @@
     border: 0;
     outline: 0;
 }
-/* .btn-search:hover{
+.btn-search:hover{
     cursor: pointer;
     opacity: .9;
 }
@@ -131,12 +131,12 @@
     background: #F1F1F1;
     color: #555;
     cursor: not-allowed;
-} */
-/* .btn-search:enabled {
+}
+.btn-search:enabled {
     background: #162938;
     color: #fff;
     cursor: pointer;
-} */
+}
 
 .details{
     width: 90%;

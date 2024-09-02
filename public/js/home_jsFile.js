@@ -17,9 +17,9 @@ const opentab = (evt, tabname) => {
   evt.currentTarget.className += " active";
 }
 
+
 document.getElementById("defaultopen").click();
-
-
+// OpenDefault.addEventListener('click', opentab);
 
 // for Animation 
 function loadingAnimation() {
@@ -69,7 +69,7 @@ loadingAnimation()
 
 
 // for smmoth scrolling 
-let scroll = new LocomotiveScroll({
+let smoothScroll = new LocomotiveScroll({
   el: document.querySelector('body'),
   smooth: true
 });
